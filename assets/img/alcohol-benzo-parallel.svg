@@ -1,1 +1,30 @@
-PARALLEL_PLACEHOLDER
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" role="img"
+     aria-label="Two-column diagram comparing alcohol and benzodiazepines: both provide short-term relief but lead to tolerance, rebound, and recovery disruption with repeated use.">
+  <title>Alcohol and Benzodiazepine Parallel</title>
+  <rect width="520" height="280" fill="#f8f9fb" rx="12"/>
+  <text x="260" y="24" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#1a2232" text-anchor="middle">An Analogy - Not Identical Drugs, but a Similar Pattern</text>
+  <rect x="20" y="38" width="220" height="36" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" rx="8"/>
+  <text x="130" y="61" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#92400e" text-anchor="middle">Alcohol</text>
+  <rect x="280" y="38" width="220" height="36" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="8"/>
+  <text x="390" y="61" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">Benzodiazepines</text>
+  <rect x="20" y="84" width="220" height="52" fill="#fffbeb" stroke="#e5e7eb" stroke-width="1" rx="7"/>
+  <text x="130" y="107" font-family="system-ui,sans-serif" font-size="10.5" fill="#555" text-anchor="middle">Short-term: calmer, less anxious</text>
+  <text x="130" y="124" font-family="system-ui,sans-serif" font-size="10.5" fill="#059669" text-anchor="middle">Quick relief (real)</text>
+  <rect x="280" y="84" width="220" height="52" fill="#eff6ff" stroke="#e5e7eb" stroke-width="1" rx="7"/>
+  <text x="390" y="107" font-family="system-ui,sans-serif" font-size="10.5" fill="#555" text-anchor="middle">Short-term: calmer, less anxious</text>
+  <text x="390" y="124" font-family="system-ui,sans-serif" font-size="10.5" fill="#059669" text-anchor="middle">Quick relief (real)</text>
+  <rect x="20" y="146" width="220" height="52" fill="#fff7ed" stroke="#e5e7eb" stroke-width="1" rx="7"/>
+  <text x="130" y="169" font-family="system-ui,sans-serif" font-size="10.5" fill="#555" text-anchor="middle">Repeated use: tolerance</text>
+  <text x="130" y="186" font-family="system-ui,sans-serif" font-size="10.5" fill="#d97706" text-anchor="middle">More needed for same effect</text>
+  <rect x="280" y="146" width="220" height="52" fill="#fff7ed" stroke="#e5e7eb" stroke-width="1" rx="7"/>
+  <text x="390" y="169" font-family="system-ui,sans-serif" font-size="10.5" fill="#555" text-anchor="middle">Repeated use: tolerance</text>
+  <text x="390" y="186" font-family="system-ui,sans-serif" font-size="10.5" fill="#d97706" text-anchor="middle">More needed for same effect</text>
+  <rect x="20" y="208" width="220" height="52" fill="#fee2e2" stroke="#e5e7eb" stroke-width="1" rx="7"/>
+  <text x="130" y="228" font-family="system-ui,sans-serif" font-size="10.5" fill="#555" text-anchor="middle">Over time: worse anxiety, sleep</text>
+  <text x="130" y="245" font-family="system-ui,sans-serif" font-size="10.5" fill="#991b1b" text-anchor="middle">Recovery disrupted</text>
+  <rect x="280" y="208" width="220" height="52" fill="#fee2e2" stroke="#e5e7eb" stroke-width="1" rx="7"/>
+  <text x="390" y="228" font-family="system-ui,sans-serif" font-size="10.5" fill="#555" text-anchor="middle">Over time: rebound, dependence</text>
+  <text x="390" y="245" font-family="system-ui,sans-serif" font-size="10.5" fill="#991b1b" text-anchor="middle">Recovery more fragile</text>
+  <line x1="240" y1="140" x2="280" y2="140" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="260" y="137" font-family="system-ui,sans-serif" font-size="9" fill="#888" text-anchor="middle">both</text>
+</svg>
