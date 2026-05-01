@@ -1,1 +1,35 @@
-SSRI_PLACEHOLDER
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" role="img"
+     aria-label="Timeline showing SSRI treatment from start, through early weeks with possible side effects, to possible 4 to 6 week benefit, and fuller 6 to 8 week or longer benefit after a useful dose is reached.">
+  <title>SSRI Treatment Timeline</title>
+  <rect width="520" height="200" fill="#f8f9fb" rx="12"/>
+  <text x="260" y="22" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#1a2232" text-anchor="middle">SSRI Timeline - Slow Start Does Not Mean Failure</text>
+  <rect x="40" y="70" width="440" height="12" fill="#bfdbfe" rx="6"/>
+  <rect x="40" y="70" width="440" height="12" fill="url(#grad)" rx="6"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bfdbfe"/>
+      <stop offset="40%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+  </defs>
+  <line x1="40" y1="65" x2="40" y2="90" stroke="#374151" stroke-width="2"/>
+  <text x="40" y="108" font-family="system-ui,sans-serif" font-size="10" fill="#374151" text-anchor="middle">Start</text>
+  <text x="40" y="121" font-family="system-ui,sans-serif" font-size="9" fill="#888" text-anchor="middle">Week 0</text>
+  <line x1="128" y1="65" x2="128" y2="90" stroke="#d97706" stroke-width="1.5"/>
+  <text x="128" y="108" font-family="system-ui,sans-serif" font-size="10" fill="#92400e" text-anchor="middle">Early adjust</text>
+  <text x="128" y="121" font-family="system-ui,sans-serif" font-size="9" fill="#888" text-anchor="middle">Weeks 1-2</text>
+  <text x="128" y="134" font-family="system-ui,sans-serif" font-size="8.5" fill="#888" text-anchor="middle">Side effects possible</text>
+  <line x1="260" y1="65" x2="260" y2="90" stroke="#059669" stroke-width="1.5"/>
+  <text x="260" y="108" font-family="system-ui,sans-serif" font-size="10" fill="#065f46" text-anchor="middle">Some may notice</text>
+  <text x="260" y="121" font-family="system-ui,sans-serif" font-size="9" fill="#888" text-anchor="middle">early benefit</text>
+  <text x="260" y="134" font-family="system-ui,sans-serif" font-size="8.5" fill="#888" text-anchor="middle">Weeks 4-6</text>
+  <line x1="400" y1="65" x2="400" y2="90" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="400" y="108" font-family="system-ui,sans-serif" font-size="10" fill="#1e3a8a" text-anchor="middle">Fuller benefit</text>
+  <text x="400" y="121" font-family="system-ui,sans-serif" font-size="9" fill="#888" text-anchor="middle">after useful dose</text>
+  <text x="400" y="134" font-family="system-ui,sans-serif" font-size="8.5" fill="#888" text-anchor="middle">Weeks 6-8+</text>
+  <polygon points="480,76 492,76 486,66" fill="#2563eb"/>
+  <polygon points="480,76 492,76 486,86" fill="#2563eb"/>
+  <rect x="40" y="150" width="440" height="38" fill="#edf6ff" stroke="#2563eb" stroke-width="1" rx="8"/>
+  <text x="260" y="168" font-family="system-ui,sans-serif" font-size="10.5" font-weight="600" fill="#1e3a8a" text-anchor="middle">A full trial = enough dose + enough time.</text>
+  <text x="260" y="183" font-family="system-ui,sans-serif" font-size="10" fill="#555" text-anchor="middle">If one SSRI does not help, another SSRI, SNRI, or different plan may still work.</text>
+</svg>
