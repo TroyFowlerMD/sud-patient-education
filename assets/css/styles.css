@@ -180,12 +180,19 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
   .callout-row { grid-template-columns: 1fr 1fr; }
 }
 
+/* Diagrams: fill the card, scale text, readable on all screen sizes */
 .diagram-wrap {
   margin: 1.25rem 0; border-radius: var(--r-md); overflow: hidden;
-  border: 1px solid var(--border); background: #fff; padding: .75rem;
+  border: 1px solid var(--border); background: #fff;
+  padding: 1rem;
 }
-.diagram-wrap figcaption { font-size: .8rem; color: var(--muted); text-align: center; margin-top: .5rem; font-style: italic; }
-.diagram-wrap svg { width: 100%; height: auto; }
+.diagram-wrap figcaption { font-size: .85rem; color: var(--muted); text-align: center; margin-top: .75rem; font-style: italic; }
+.diagram-wrap img,
+.diagram-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .references { margin-top: 2rem; border-top: 2px solid var(--border); padding-top: 1.25rem; }
 .references h2 { font-size: 1.1rem; margin-bottom: .75rem; color: var(--primary-dk); }
