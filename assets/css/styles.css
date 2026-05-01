@@ -1,6 +1,6 @@
 /* ============================================================
    SUD Patient Education - styles.css
-   Mobile-first. Single-column base. Scale up at 700px+.
+   Mobile-first. Single-column always.
    ============================================================ */
 
 /* ---------- Reset ---------- */
@@ -29,7 +29,7 @@
   --sh-sm:        0 1px 4px rgba(0,0,0,.08);
   --sh-md:        0 3px 10px rgba(0,0,0,.10);
   --font:         'Segoe UI', system-ui, -apple-system, sans-serif;
-  --max-w:        780px;
+  --max-w:        1100px;
 }
 
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -75,17 +75,13 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
 .breadcrumb a { color: var(--primary); }
 .breadcrumb__sep { margin: 0 .4rem; }
 
-.page-wrapper { max-width: var(--max-w); margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+.page-wrapper { max-width: var(--max-w); margin: 0 auto; padding: 1.25rem 1.5rem 3rem; }
 
-.topic-layout { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
-@media (min-width: 700px) {
-  .topic-layout { grid-template-columns: 1fr 280px; align-items: start; }
-  .topic-main { order: 1; }
-  .topic-sidebar { order: 2; position: sticky; top: 1rem; }
-}
+/* Single column layout - no sidebar */
+.topic-layout { display: block; }
 
 .page-title-block { margin-bottom: 1.5rem; }
-.page-title-block h1 { font-size: clamp(1.25rem, 4vw, 1.7rem); line-height: 1.25; color: var(--primary-dk); margin-bottom: .5rem; }
+.page-title-block h1 { font-size: clamp(1.25rem, 4vw, 1.85rem); line-height: 1.25; color: var(--primary-dk); margin-bottom: .5rem; }
 .page-subtitle { font-size: 1rem; color: var(--muted); font-style: italic; }
 
 .intro-banner {
@@ -97,7 +93,7 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
 
 .toolbar { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
 .toolbar button {
-  font-size: .85rem; padding: .5rem .9rem;
+  font-size: .875rem; padding: .5rem 1rem;
   border-radius: var(--r-sm); border: 1.5px solid var(--border);
   background: var(--surface); color: var(--text);
   cursor: pointer; line-height: 1.3;
@@ -115,6 +111,7 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
   border-radius: var(--r-lg); box-shadow: var(--sh-sm);
   margin-bottom: 1rem; overflow: hidden;
 }
+.accordion-card--ssri { border-color: var(--primary); border-width: 2px; }
 .accordion-card__trigger {
   width: 100%; display: flex; align-items: center;
   justify-content: space-between; gap: .75rem;
@@ -124,7 +121,9 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
   min-height: 56px; transition: background .15s;
   font-family: var(--font);
 }
+.accordion-card--ssri .accordion-card__trigger { color: var(--primary-dk); background: #edf6ff; }
 .accordion-card__trigger:hover { background: #f2f5fb; }
+.accordion-card--ssri .accordion-card__trigger:hover { background: #ddeeff; }
 .accordion-card__trigger:focus-visible { outline: 3px solid var(--primary); outline-offset: -3px; }
 .accordion-card__icon {
   flex-shrink: 0; width: 26px; height: 26px;
@@ -134,6 +133,7 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
 }
 .accordion-card[aria-expanded="true"] .accordion-card__icon { transform: rotate(180deg); background: var(--accent); }
 .accordion-card__summary { padding: 0 1.125rem .75rem; font-size: .97rem; color: var(--muted); line-height: 1.6; }
+.accordion-card--ssri .accordion-card__summary { background: #edf6ff; padding-top: .25rem; }
 .accordion-card__body { display: none; padding: .25rem 1.125rem 1.125rem; border-top: 1px solid var(--border); }
 .accordion-card[aria-expanded="true"] .accordion-card__body { display: block; }
 .accordion-card__body p { margin-bottom: .75rem; }
@@ -161,6 +161,7 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
 .deeper-dive__body p { margin-bottom: .65rem; }
 .deeper-dive__body p:last-child { margin-bottom: 0; }
 
+/* Inline callout cards (no sidebar) */
 .callout { border-radius: var(--r-md); padding: 1.1rem 1.25rem; margin-bottom: 1.25rem; font-size: .95rem; line-height: 1.65; }
 .callout--ssri    { background: #edf6ff; border: 2px solid var(--primary); }
 .callout--already { background: var(--warn-bg); border: 2px solid var(--warn-bdr); }
@@ -173,11 +174,10 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
 .callout p:last-child { margin-bottom: 0; }
 .callout ul { margin: .25rem 0 .5rem 1.25rem; }
 
-.ssri-mobile-callout { display: block; margin-bottom: 1.5rem; }
-.ssri-sidebar-only   { display: none; }
+/* Callout row: side-by-side on wide screens, stacked on mobile */
+.callout-row { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-bottom: 1.5rem; }
 @media (min-width: 700px) {
-  .ssri-mobile-callout { display: none; }
-  .ssri-sidebar-only   { display: block; }
+  .callout-row { grid-template-columns: 1fr 1fr; }
 }
 
 .diagram-wrap {
@@ -205,6 +205,9 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
 
 .hub-intro { font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; padding: 1.25rem; background: var(--accent-lt); border-left: 4px solid var(--accent); border-radius: var(--r-md); }
 .hub-categories { display: grid; gap: 1.5rem; }
+@media (min-width: 700px) {
+  .hub-categories { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+}
 .hub-category { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--sh-sm); overflow: hidden; }
 .hub-category__header { padding: 1rem 1.25rem .75rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: .65rem; }
 .hub-category__icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
@@ -235,5 +238,7 @@ a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border
 .tag--coming { background: #f0f0f0; color: #888; }
 .topic-card--placeholder { opacity: .65; cursor: default; }
 .topic-card--placeholder:hover { border-color: var(--border); box-shadow: none; background: #f8f9fb; }
+
+.print-footer-disclaimer { display: none; }
 
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
