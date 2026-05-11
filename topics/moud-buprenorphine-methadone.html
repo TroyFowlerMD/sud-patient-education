@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choosing Medication for Opioid Use Disorder | Buprenorphine &amp; Methadone</title>
+<meta name="description" content="Patient and family education guide about buprenorphine and methadone for opioid use disorder. Covers how medications work, risks, benefits, and what to expect.">
+<style>
+:root{
+  --blue-dark:#1a3a5c;
+  --blue-mid:#2563a8;
+  --blue-light:#dbeafe;
+  --teal:#0d9488;
+  --amber:#d97706;
+  --red:#dc2626;
+  --green:#16a34a;
+  --gray-100:#f3f4f6;
+  --gray-200:#e5e7eb;
+  --gray-700:#374151;
+  --gray-900:#111827;
+  --font:'Segoe UI',system-ui,-apple-system,sans-serif;
+  --r:10px;
+  --shadow:0 2px 8px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);color:var(--gray-900);background:#f8fafc;line-height:1.65;font-size:1rem}
+a{color:var(--blue-mid);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* SKIP LINK */
+.skip-link{position:absolute;left:-999px;top:0;z-index:999;background:var(--blue-dark);color:#fff;padding:.5rem 1rem;border-radius:0 0 var(--r) 0}
+.skip-link:focus{left:0}
+
+/* NAV */
+nav{background:var(--blue-dark);color:#fff;padding:.75rem 1rem;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+nav .nav-title{font-weight:700;font-size:1rem;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav a.nav-link{color:#cbd5e1;font-size:.82rem;white-space:nowrap;padding:.25rem .5rem;border-radius:4px}
+nav a.nav-link:hover{background:rgba(255,255,255,.15);color:#fff;text-decoration:none}
+button.nav-print{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);padding:.3rem .8rem;border-radius:6px;cursor:pointer;font-size:.82rem;font-family:var(--font)}
+button.nav-print:hover{background:rgba(255,255,255,.25)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--blue-dark) 0%,#1e4d8c 100%);color:#fff;padding:3rem 1rem 2.5rem;text-align:center}
+.hero h1{font-size:clamp(1.5rem,4vw,2.25rem);font-weight:800;margin-bottom:.75rem;line-height:1.2}
+.hero .subtitle{font-size:1.05rem;opacity:.88;max-width:600px;margin:0 auto 1.25rem}
+.disclaimer{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--r);padding:.75rem 1.25rem;font-size:.85rem;max-width:650px;margin:0 auto;text-align:left}
+.disclaimer strong{display:block;margin-bottom:.25rem}
+
+/* RECEPTOR HERO GRAPHIC */
+.receptor-hero{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding:2rem 1rem;background:var(--gray-100)}
+.receptor-card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem;text-align:center;width:200px}
+.receptor-card .icon{font-size:2.5rem;margin-bottom:.5rem}
+.receptor-card h3{font-size:.95rem;color:var(--blue-dark);margin-bottom:.4rem}
+.receptor-card p{font-size:.82rem;color:var(--gray-700)}
+
+/* MAIN LAYOUT */
+main{max-width:800px;margin:0 auto;padding:1.5rem 1rem 3rem}
+
+/* SECTIONS */
+section{margin-bottom:2.5rem}
+section h2{font-size:1.3rem;color:var(--blue-dark);margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid var(--blue-light)}
+section h3{font-size:1.05rem;color:var(--blue-dark);margin:1.25rem 0 .5rem}
+p{margin-bottom:.85rem;color:var(--gray-700)}
+
+/* CARDS */
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem 1.5rem;margin-bottom:1rem}
+.card.bupe{border-left:4px solid var(--blue-mid)}
+.card.methadone{border-left:4px solid var(--teal)}
+.card.naltrexone{border-left:4px solid var(--amber)}
+.card h3{margin-top:0}
+
+/* STAT BANNER */
+.stat-banner{display:flex;gap:1rem;flex-wrap:wrap;margin:1.25rem 0}
+.stat-box{flex:1;min-width:150px;background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1rem;text-align:center}
+.stat-box .big{font-size:2rem;font-weight:800;color:var(--green);line-height:1}
+.stat-box .label{font-size:.82rem;color:var(--gray-700);margin-top:.3rem}
+
+/* RISK CHART */
+.risk-chart{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem;margin:1.25rem 0}
+.risk-chart h3{margin-bottom:1rem;color:var(--blue-dark)}
+.bar-row{margin-bottom:.85rem}
+.bar-label{font-size:.88rem;color:var(--gray-700);margin-bottom:.3rem;font-weight:600}
+.bar-track{background:var(--gray-100);border-radius:4px;height:32px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem;color:#fff;font-weight:700;font-size:.88rem;transition:width .3s}
+.bar-in{background:var(--green)}
+.bar-out{background:var(--red)}
+.chart-note{font-size:.78rem;color:#6b7280;margin-top:.75rem}
+
+/* RETENTION CHART */
+.retention-chart{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem;margin:1.25rem 0}
+.ret-bars{display:flex;align-items:flex-end;gap:1.5rem;height:140px;padding:0 1rem}
+.ret-col{display:flex;flex-direction:column;align-items:center;gap:.4rem;flex:1}
+.ret-bar{width:100%;border-radius:6px 6px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:.4rem;color:#fff;font-weight:700;font-size:1rem}
+.ret-label{font-size:.82rem;color:var(--gray-700);text-align:center}
+.ret-caution{font-size:.78rem;color:var(--amber);margin-top:.75rem;font-style:italic}
+
+/* TIMELINE */
+.timeline{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem;margin:1.25rem 0}
+.timeline h3{margin-bottom:1rem;color:var(--blue-dark)}
+.tl-track{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:.5rem}
+.tl-seg{flex:1;min-width:90px;text-align:center;position:relative}
+.tl-seg::after{content:'';position:absolute;top:24px;right:-1px;width:2px;height:16px;background:var(--gray-200)}
+.tl-seg:last-child::after{display:none}
+.tl-dot{width:20px;height:20px;border-radius:50%;margin:0 auto .4rem;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:#fff;font-weight:700}
+.tl-label{font-size:.72rem;color:var(--gray-700);line-height:1.3}
+.tl-seg.danger .tl-dot{background:var(--red)}
+.tl-seg.warning .tl-dot{background:var(--amber)}
+.tl-seg.safe .tl-dot{background:var(--green)}
+.tl-seg.neutral .tl-dot{background:#9ca3af}
+
+/* DOSE CURVE */
+.dose-curve{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem;margin:1.25rem 0}
+.dose-curve svg{width:100%;height:auto;display:block}
+
+/* DECISION TABLE */
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);margin:1.25rem 0;font-size:.88rem}
+th{background:var(--blue-dark);color:#fff;padding:.65rem 1rem;text-align:left;font-weight:700}
+td{padding:.6rem 1rem;border-bottom:1px solid var(--gray-200);color:var(--gray-700);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#f9fafb}
+
+/* FAQ */
+details.faq-details{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:1rem;overflow:hidden}
+details.faq-details summary{padding:1rem 1.25rem;cursor:pointer;font-weight:700;font-size:1rem;color:var(--blue-dark);list-style:none;display:flex;align-items:center;gap:.5rem;user-select:none}
+details.faq-details summary::-webkit-details-marker{display:none}
+details.faq-details summary::before{content:'\002B';font-size:1.2rem;color:var(--blue-mid);flex-shrink:0}
+details.faq-details[open] summary::before{content:'\2212'}
+details.faq-details summary:focus{outline:2px solid var(--blue-mid);outline-offset:2px}
+details.faq-details .faq-body{padding:.25rem 1.25rem 1rem;border-top:1px solid var(--gray-200);color:var(--gray-700)}
+details.faq-details .faq-body p{font-size:.95rem}
+
+/* ALERTS */
+.alert{border-radius:var(--r);padding:1rem 1.25rem;margin:1.25rem 0;font-size:.92rem}
+.alert.warning{background:#fffbeb;border-left:4px solid var(--amber)}
+.alert.danger{background:#fef2f2;border-left:4px solid var(--red)}
+.alert.info{background:var(--blue-light);border-left:4px solid var(--blue-mid)}
+.alert strong{display:block;margin-bottom:.3rem}
+
+/* TAKE-HOME */
+.takehome{background:linear-gradient(135deg,var(--blue-dark),#1e4d8c);color:#fff;border-radius:var(--r);padding:1.75rem;margin:2rem 0}
+.takehome h2{color:#fff;border:none;margin-bottom:1rem}
+.takehome ul{list-style:none;padding:0}
+.takehome li{padding:.4rem 0;padding-left:1.5rem;position:relative;font-size:.95rem;opacity:.92}
+.takehome li::before{content:'✓';position:absolute;left:0;color:#86efac;font-weight:700}
+
+/* PRINT */
+@media print{
+  nav,button,.nav-print,.skip-link{display:none!important}
+  body{background:#fff;font-size:11pt}
+  .hero{background:#1a3a5c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a::after{content:" ("attr(href)")";font-size:.75em;color:#666}
+  .card,.stat-box,.risk-chart,.retention-chart,.timeline{box-shadow:none;border:1px solid #ddd}
+  section{page-break-inside:avoid}
+  .takehome{background:#1a3a5c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media(max-width:480px){
+  .stat-banner{flex-direction:column}
+  .ret-bars{gap:.75rem}
+  table{font-size:.78rem}
+  th,td{padding:.5rem .6rem}
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Page navigation">
+  <span class="nav-title">Medication for Opioid Use Disorder</span>
+  <a href="#how-meds-work" class="nav-link">How They Work</a>
+  <a href="#the-numbers" class="nav-link">The Numbers</a>
+  <a href="#staying-in-treatment" class="nav-link">Retention</a>
+  <a href="#how-long" class="nav-link">How Long</a>
+  <a href="#faq" class="nav-link">FAQ</a>
+  <button class="nav-print" onclick="window.print()" aria-label="Print this page" type="button">&#128424; Print</button>
+</nav>
+
+<!-- HERO -->
+<header class="hero" role="banner">
+  <h1>Choosing Medication for<br>Opioid Use Disorder</h1>
+  <p class="subtitle">A guide to buprenorphine and methadone — what they do, how they compare, and how to stay safe</p>
+  <div class="disclaimer" role="note">
+    <strong>&#9432; For education only</strong>
+    This guide provides general information. It is not a substitute for advice from your doctor, nurse, pharmacist, or treatment team. Medication decisions should always be made with your provider.
+  </div>
+</header>
+
+<!-- RECEPTOR DIAGRAM -->
+<div class="receptor-hero" role="img" aria-label="How opioid medications interact with brain receptors">
+  <div class="receptor-card">
+    <div class="icon">🔑</div>
+    <h3>Full Agonist<br><span style="color:var(--gray-700);font-weight:400">(e.g., heroin, oxycodone)</span></h3>
+    <p>Fully activates receptors — strong effect, high overdose risk</p>
+  </div>
+  <div class="receptor-card">
+    <div class="icon">🗝️</div>
+    <h3>Partial Agonist<br><span style="color:var(--gray-700);font-weight:400">(buprenorphine)</span></h3>
+    <p>Activates receptors partially — treats withdrawal &amp; cravings with ceiling effect</p>
+  </div>
+  <div class="receptor-card">
+    <div class="icon">🔒</div>
+    <h3>Full Agonist<br><span style="color:var(--gray-700);font-weight:400">(methadone)</span></h3>
+    <p>Full activation at careful doses — strong craving suppression, requires monitoring</p>
+  </div>
+  <div class="receptor-card">
+    <div class="icon">🚫</div>
+    <h3>Antagonist<br><span style="color:var(--gray-700);font-weight:400">(naltrexone)</span></h3>
+    <p>Blocks receptors — no activation, requires full detox first</p>
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- HOW MEDICATIONS WORK -->
+<section id="how-meds-work">
+  <h2>How Medications Work</h2>
+  <p>Opioids work by binding to receptors in the brain and body. Different medications interact with those receptors in different ways — and that difference matters for safety and treatment.</p>
+
+  <div class="card bupe">
+    <h3>&#128138; Buprenorphine (Suboxone, Subutex, Sublocade)</h3>
+    <p>Buprenorphine is a <strong>partial agonist</strong> — it activates opioid receptors, but only partway. Think of it like a car engine that runs but only revs to a limited speed. This ceiling effect means that above a certain dose, the effect levels off, which provides some protection against overdose.</p>
+    <p>Buprenorphine also binds very tightly to opioid receptors — tighter than most other opioids. This strong binding can reduce the effect of other opioids taken on top of it and helps suppress cravings and withdrawal around the clock.</p>
+    <p>Most formulations include naloxone (Narcan) to discourage injection misuse. When taken as a film or tablet under the tongue as prescribed, the naloxone is not significantly absorbed and does not interfere with treatment.</p>
+    <p>Buprenorphine is usually prescribed in an office or clinic setting and can be taken at home after early stabilization — making it more flexible for outpatient life.</p>
+
+    <!-- Dose curve SVG -->
+    <div class="dose-curve" aria-label="Dose-effect curve showing buprenorphine ceiling effect">
+      <svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;margin:0 auto">
+        <text x="10" y="14" font-size="11" fill="#374151" font-family="sans-serif" font-weight="bold">Buprenorphine: Ceiling Effect</text>
+        <!-- axes -->
+        <line x1="40" y1="20" x2="40" y2="135" stroke="#9ca3af" stroke-width="1.5"/>
+        <line x1="40" y1="135" x2="305" y2="135" stroke="#9ca3af" stroke-width="1.5"/>
+        <text x="5" y="80" font-size="9" fill="#6b7280" font-family="sans-serif" transform="rotate(-90,12,80)">Effect</text>
+        <text x="160" y="150" font-size="9" fill="#6b7280" font-family="sans-serif" text-anchor="middle">Dose</text>
+        <!-- full agonist line -->
+        <polyline points="40,130 80,110 120,85 160,60 200,35 240,18 280,10" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,3"/>
+        <text x="282" y="12" font-size="8" fill="#dc2626" font-family="sans-serif">Full agonist</text>
+        <!-- bupe curve with plateau -->
+        <path d="M40,130 Q80,95 130,60 Q170,35 200,30 L280,30" fill="none" stroke="#2563a8" stroke-width="2.5"/>
+        <text x="205" y="26" font-size="8" fill="#2563a8" font-family="sans-serif">Buprenorphine</text>
+        <!-- ceiling label -->
+        <line x1="195" y1="30" x2="195" y2="135" stroke="#2563a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="197" y="90" font-size="8" fill="#2563a8" font-family="sans-serif">Ceiling</text>
+        <!-- overdose zone -->
+        <rect x="40" y="20" width="260" height="20" fill="#fef2f2" opacity="0.6"/>
+        <text x="160" y="33" font-size="8" fill="#dc2626" font-family="sans-serif" text-anchor="middle">Overdose zone</text>
+      </svg>
+      <p style="font-size:.78rem;color:#6b7280;margin-top:.5rem">Buprenorphine's effect levels off (ceiling) while full agonists keep rising into overdose territory.</p>
+    </div>
+
+    <div class="alert info" style="margin-top:1rem">
+      <strong>Starting buprenorphine</strong>
+      Starting too soon after last opioid use can cause <strong>precipitated withdrawal</strong> — sudden, severe withdrawal symptoms. This is a known medical risk, not an unpredictable reaction. Your treatment team will time the start carefully.
+    </div>
+
+    <!-- precipitated withdrawal diagram -->
+    <div class="timeline" aria-label="Precipitated withdrawal timeline">
+      <h3 style="font-size:.9rem;margin-bottom:.75rem">Precipitated Withdrawal: Why Timing Matters</h3>
+      <div class="tl-track">
+        <div class="tl-seg safe"><div class="tl-dot">✓</div><div class="tl-label">Last opioid use</div></div>
+        <div class="tl-seg neutral"><div class="tl-dot">→</div><div class="tl-label">Opioids still<br>active</div></div>
+        <div class="tl-seg warning"><div class="tl-dot">!</div><div class="tl-label">Mild withdrawal begins</div></div>
+        <div class="tl-seg safe"><div class="tl-dot">✓</div><div class="tl-label">COWS score checked<br>— safe window</div></div>
+        <div class="tl-seg safe"><div class="tl-dot">Rx</div><div class="tl-label">Buprenorphine<br>started safely</div></div>
+      </div>
+      <p style="font-size:.78rem;color:#6b7280;margin-top:.5rem">Starting buprenorphine before opioids have cleared can displace them and trigger abrupt withdrawal.</p>
+    </div>
+  </div>
+
+  <div class="card methadone">
+    <h3>&#128138; Methadone (Methadose, Dolophine)</h3>
+    <p>Methadone is a <strong>full opioid agonist</strong> — it fully activates opioid receptors, similar to other opioids, but at a carefully controlled dose and in a monitored clinical setting. Because it fully activates receptors, it is highly effective at suppressing withdrawal and cravings, especially for people with high opioid tolerance.</p>
+    <p>Methadone also has a very long half-life — it stays in the body for 24 to 36 hours or longer after a single dose. This means it provides stable, around-the-clock suppression of withdrawal and cravings with once-daily dosing. But it also means that the medication accumulates over time during the first days of treatment.</p>
+    <div class="alert warning">
+      <strong>&#9888; Important safety note</strong>
+      Because methadone builds up slowly, a dose that seems tolerable on day one can become too strong after several days if increases happen too quickly. This is why methadone for addiction is dispensed at licensed opioid treatment programs (OTPs), not regular pharmacies, and why dose increases require medical supervision and careful monitoring.
+    </div>
+    <p>Methadone requires daily clinic attendance, especially early in treatment. This structure can be helpful for some patients but creates real barriers for others — including transportation, work schedules, and distance from an OTP.</p>
+  </div>
+
+  <div class="card naltrexone" id="naltrexone">
+    <h3>&#128138; Naltrexone (Vivitrol) — A Different Approach</h3>
+    <p>Naltrexone is also FDA-approved for opioid use disorder. Unlike buprenorphine and methadone, it is an <strong>antagonist</strong> — it blocks opioid receptors rather than activating them. It has no opioid activity and will not cause dependence.</p>
+    <p>The challenge: starting naltrexone too soon after opioid use causes severe precipitated withdrawal. Patients typically need to be opioid-free for <strong>7–10 days</strong> after short-acting opioids and <strong>10–14 days</strong> after long-acting opioids before starting. Because this guide focuses on starting medication during or soon after detox, buprenorphine and methadone are usually the main options. Naltrexone is worth discussing with your provider if full abstinence before initiation is achievable.</p>
+  </div>
+</section>
+
+<!-- THE NUMBERS -->
+<section id="the-numbers">
+  <h2>What the Numbers Show</h2>
+  <p>Numbers do not choose the medication for you, but they can make the decision clearer. The biggest message from research is that being <em>in</em> treatment with methadone or buprenorphine is much safer than being <em>out</em> of treatment.</p>
+
+  <!-- Stat banner -->
+  <div class="stat-banner" role="region" aria-label="Mortality reduction statistics">
+    <div class="stat-box">
+      <div class="big">59%</div>
+      <div class="label">Reduced risk of death after nonfatal overdose with methadone</div>
+    </div>
+    <div class="stat-box">
+      <div class="big">38%</div>
+      <div class="label">Reduced risk of death after nonfatal overdose with buprenorphine</div>
+    </div>
+    <div class="stat-box">
+      <div class="big">4.8×</div>
+      <div class="label">Higher overdose death rate <em>out</em> of methadone treatment vs. in treatment</div>
+    </div>
+    <div class="stat-box">
+      <div class="big">3.3×</div>
+      <div class="label">Higher overdose death rate <em>out</em> of buprenorphine treatment vs. in treatment</div>
+    </div>
+  </div>
+
+  <!-- Risk chart -->
+  <div class="risk-chart" role="img" aria-label="Bar chart: Overdose death risk is higher out of treatment">
+    <h3>Overdose Death Risk: In Treatment vs. Out of Treatment</h3>
+    <div class="bar-row">
+      <div class="bar-label">Methadone — IN treatment (2.6 per 1,000 person-years)</div>
+      <div class="bar-track"><div class="bar-fill bar-in" style="width:20%">2.6</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Methadone — OUT of treatment (12.7 per 1,000 person-years)</div>
+      <div class="bar-track"><div class="bar-fill bar-out" style="width:100%">12.7 — 4.8× higher</div></div>
+    </div>
+    <div class="bar-row" style="margin-top:1rem">
+      <div class="bar-label">Buprenorphine — IN treatment (1.4 per 1,000 person-years)</div>
+      <div class="bar-track"><div class="bar-fill bar-in" style="width:11%">1.4</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Buprenorphine — OUT of treatment (4.6 per 1,000 person-years)</div>
+      <div class="bar-track"><div class="bar-fill bar-out" style="width:36%">4.6 — 3.3× higher</div></div>
+    </div>
+    <p class="chart-note">Source: Pooled data from BMJ systematic review and meta-analysis. Rates are unadjusted pooled estimates across included studies.</p>
+  </div>
+
+  <!-- First 4 weeks timeline -->
+  <div class="timeline" aria-label="High-risk period after stopping medication">
+    <h3>The First Month After Stopping Is High Risk</h3>
+    <div class="tl-track">
+      <div class="tl-seg safe"><div class="tl-dot">✓</div><div class="tl-label">On medication<br>(protected)</div></div>
+      <div class="tl-seg danger"><div class="tl-dot">!</div><div class="tl-label">Week 1–4<br>after stopping<br>~3× higher risk</div></div>
+      <div class="tl-seg warning"><div class="tl-dot">⚠</div><div class="tl-label">Week 5+<br>out of treatment<br>still elevated</div></div>
+      <div class="tl-seg neutral"><div class="tl-dot">→</div><div class="tl-label">Best path:<br>slow taper with<br>provider support</div></div>
+    </div>
+    <p style="font-size:.78rem;color:#6b7280;margin-top:.5rem">For buprenorphine, all-cause mortality in weeks 1–4 after stopping was approximately 3× higher than during the remaining time out of treatment.</p>
+  </div>
+</section>
+
+<!-- STAYING IN TREATMENT -->
+<section id="staying-in-treatment">
+  <h2>Staying in Treatment Matters</h2>
+  <p>A medication only protects you if you can stay on it. That is why the "best" medication is not just the one that sounds best on paper — it is the one that is effective, tolerable, and realistic to continue.</p>
+  <p>In one large randomized trial, more people completed 24 weeks of treatment with methadone than with buprenorphine: 74% with methadone compared with 46% with buprenorphine. In plain language, that means people assigned to methadone completed treatment about 1.6 times as often in that study.</p>
+
+  <!-- Retention chart -->
+  <div class="retention-chart" role="img" aria-label="Treatment completion rates: methadone 74% vs buprenorphine 46%">
+    <h3>24-Week Treatment Completion (Randomized Trial)</h3>
+    <div class="ret-bars">
+      <div class="ret-col">
+        <div class="ret-bar" style="height:104px;background:var(--teal)">74%</div>
+        <div class="ret-label">Methadone</div>
+      </div>
+      <div class="ret-col">
+        <div class="ret-bar" style="height:65px;background:var(--blue-mid)">46%</div>
+        <div class="ret-label">Buprenorphine</div>
+      </div>
+    </div>
+    <p class="ret-caution">Trial context matters. Access, patient preference, dose adequacy, and real-world factors all affect outcomes. Methadone completion reached 80% when maximum doses reached or exceeded 60 mg/day.</p>
+  </div>
+
+  <p>This does not mean methadone is automatically better for everyone. It means methadone's structure and dose range can help some people stay in treatment, while buprenorphine's easier outpatient access can help other people stay in treatment.</p>
+</section>
+
+<!-- DOSE ADEQUACY -->
+<section id="dose-adequacy">
+  <h2>Dose Adequacy</h2>
+  <p>Underdosing can be a major reason medication "doesn't work." If a person still has withdrawal, cravings, or ongoing opioid use, the dose may need reassessment.</p>
+  <p>For buprenorphine, many people do well at 16 mg per day, while some need 24 mg per day. For methadone, the effective dose range is broader, and many patients need doses above very low starting ranges to fully suppress withdrawal and cravings.</p>
+  <div class="alert info">
+    <strong>The goal of dosing</strong>
+    The goal is not to feel intoxicated. The goal is to feel <em>normal</em> enough to sleep, eat, think clearly, participate in treatment, avoid withdrawal, manage cravings, and build recovery.
+  </div>
+</section>
+
+<!-- OVERDOSE PROTECTION -->
+<section id="overdose-protection">
+  <h2>Overdose Protection</h2>
+  <p>Buprenorphine and methadone reduce overdose risk partly by stabilizing opioid tolerance, reducing cravings, decreasing return to unpredictable street opioids, and helping people remain connected to care. Buprenorphine also has a ceiling effect and strong receptor binding, which can provide some protection against other opioids.</p>
+  <p>But neither medication makes overdose impossible. Risk increases with fentanyl exposure, missed medication, stopping treatment, taking extra methadone, using benzodiazepines or alcohol, or returning to opioid use after tolerance has dropped.</p>
+  <div class="alert danger">
+    <strong>&#128276; Everyone with opioid use disorder should have naloxone</strong>
+    Family members, partners, roommates, and close supports should know where naloxone is kept and how to use it. Call 911 immediately in an overdose emergency.
+  </div>
+</section>
+
+<!-- HOW LONG -->
+<section id="how-long">
+  <h2>How Long Should I Stay on Medication?</h2>
+  <p>There is no one-size-fits-all answer. For many people with severe opioid use disorder, long-term medication treatment is the safest plan. A useful way to think about MOUD is like maintenance treatment for other chronic illnesses — people with diabetes may need insulin long-term, and people with opioid use disorder may need medication to keep the illness stable.</p>
+  <p>Some people can eventually taper off medication and maintain recovery. The harder question is when the risk is low enough to make stopping a good idea. In general, it is better not to rush.</p>
+  <p>A practical approach is to first build a stable recovery: consistent sobriety, stable housing, healthy routines, meaningful work or volunteering, supportive relationships, treatment engagement, and a plan for stress. After a long period of stability — often years, and at least more than a few months — it may be reasonable to discuss a slow, careful taper with an outpatient provider.</p>
+
+  <!-- Don't rush stopping timeline -->
+  <div class="timeline" aria-label="Recovery timeline showing when taper may be appropriate">
+    <h3>A Safer Path to Considering a Taper</h3>
+    <div class="tl-track">
+      <div class="tl-seg warning"><div class="tl-dot">1</div><div class="tl-label">Early recovery<br>(high risk)</div></div>
+      <div class="tl-seg warning"><div class="tl-dot">2</div><div class="tl-label">Building stable<br>routines</div></div>
+      <div class="tl-seg safe"><div class="tl-dot">3</div><div class="tl-label">Long period of<br>stability<br>(months–years)</div></div>
+      <div class="tl-seg safe"><div class="tl-dot">4</div><div class="tl-label">Shared taper<br>discussion<br>with provider</div></div>
+      <div class="tl-seg neutral"><div class="tl-dot">5</div><div class="tl-label">Slow taper +<br>backup plan if<br>cravings return</div></div>
+    </div>
+  </div>
+
+  <h3>If Stopping Later</h3>
+  <p>Stopping should be slow and planned. It should not be done suddenly, secretly, or during a major life crisis. Before tapering, ask: What has changed that makes relapse risk lower now? What supports are in place? What is the plan if cravings return?</p>
+  <p>A good taper plan includes follow-up visits, naloxone, support people, relapse-warning signs, and permission to pause or reverse the taper if risk increases.</p>
+</section>
+
+<!-- DETOX IS NOT ENOUGH -->
+<section id="detox">
+  <h2>Detox Is Not Enough</h2>
+  <p>Detox is real medical treatment. It helps the body get through withdrawal more safely and more comfortably. But detox is not the whole treatment for addiction. Detox treats withdrawal — the deeper addiction treatment usually begins <em>after</em> detox, in residential rehab, outpatient treatment, medication treatment, therapy, recovery support, healthier routines, and rebuilding a life worth protecting.</p>
+
+  <div class="alert danger">
+    <strong>&#9888; Leaving detox without a medication plan can be dangerous</strong>
+    Detoxification on its own, without medications for opioid use disorder, is not recommended because it increases the risk of returning to opioid use, overdose, and overdose death. Tolerance can drop quickly after detox, but cravings and relapse risk may remain high.
+  </div>
+
+  <!-- Post-detox timeline -->
+  <div class="timeline" aria-label="Detox followed by MOUD and ongoing recovery">
+    <h3>Detox Is the Beginning, Not the End</h3>
+    <div class="tl-track">
+      <div class="tl-seg safe"><div class="tl-dot">Rx</div><div class="tl-label">Detox:<br>withdrawal<br>stabilization</div></div>
+      <div class="tl-seg danger"><div class="tl-dot">!</div><div class="tl-label">⚠ Tolerance<br>drops quickly<br>after detox</div></div>
+      <div class="tl-seg safe"><div class="tl-dot">→</div><div class="tl-label">MOUD starts:<br>relapse<br>prevention</div></div>
+      <div class="tl-seg safe"><div class="tl-dot">→</div><div class="tl-label">Rehab or<br>outpatient<br>care</div></div>
+      <div class="tl-seg safe"><div class="tl-dot">✓</div><div class="tl-label">Recovery<br>building:<br>routines, support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DECISION GUIDE -->
+<section id="decision-guide">
+  <h2>Which Medication May Fit Best?</h2>
+  <p>This is a starting point for conversation with your provider — not a substitute for it.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Situation</th>
+        <th>Buprenorphine may fit</th>
+        <th>Methadone may fit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Needs flexible outpatient follow-up</td><td>Often yes</td><td>Less often — daily OTP attendance required</td></tr>
+      <tr><td>Needs high structure</td><td>Sometimes</td><td>Often yes</td></tr>
+      <tr><td>High fentanyl tolerance</td><td>Often, if adequate dose and induction strategy work</td><td>Often yes</td></tr>
+      <tr><td>Prior success on one medication</td><td>Strong reason to consider it again</td><td>Strong reason to consider it again</td></tr>
+      <tr><td>Prior poor response to one medication</td><td>Reassess dose, timing, and adherence before calling it failure</td><td>Reassess dose, access, and safety before calling it failure</td></tr>
+      <tr><td>Transportation barriers</td><td>Often easier</td><td>Can be hard if daily clinic attendance is required</td></tr>
+      <tr><td>Sedative co-use risk</td><td>Use caution</td><td>Use extra caution</td></tr>
+      <tr><td>Wants blocker-like effect</td><td>Stronger blocker-like effect</td><td>Less blocker-like</td></tr>
+      <tr><td>Pregnancy</td><td>Discuss separately with your provider</td><td>Discuss separately with your provider</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Common Concerns</h2>
+
+  <details class="faq-details">
+    <summary>"Is this just replacing one addiction with another?"</summary>
+    <div class="faq-body">
+      <p>No. Addiction is not simply having a substance in the body. Addiction involves loss of control, compulsive use despite harm, craving, and life becoming organized around drug use.</p>
+      <p>When medication is taken as prescribed, the goal is stability: no intoxication, no withdrawal cycle, fewer cravings, lower overdose risk, and better ability to participate in life. That is treatment — not the same as active addiction.</p>
+    </div>
+  </details>
+
+  <details class="faq-details">
+    <summary>"Will I feel high?"</summary>
+    <div class="faq-body">
+      <p>The goal is not to feel high. The goal is to feel <em>normal</em>.</p>
+      <p>If a medication dose causes ongoing intoxication, confusion, oversedation, or unsafe behavior, the dose or treatment plan needs reassessment. If the dose is too low and cravings or withdrawal continue, that also needs reassessment.</p>
+    </div>
+  </details>
+
+  <details class="faq-details">
+    <summary>"What if I still have cravings?"</summary>
+    <div class="faq-body">
+      <p>Cravings are not a moral failure. Cravings are a symptom that needs a treatment response.</p>
+      <p>The response might include dose adjustment, more structure, counseling, coping strategies, addressing anxiety or sleep, changing people/places/routines, or switching medication if one option is not working. Tell your treatment team.</p>
+    </div>
+  </details>
+
+  <details class="faq-details">
+    <summary>"What if I use while on medication?"</summary>
+    <div class="faq-body">
+      <p>Tell your treatment team. Returning to use is clinically important information — not a reason to give up.</p>
+      <p>The safest response is usually to increase support, reassess dose adequacy, check for triggers, make an overdose prevention plan, and continue treatment engagement.</p>
+    </div>
+  </details>
+</section>
+
+<!-- TAKE-HOME -->
+<div class="takehome" role="region" aria-label="Key take-home messages">
+  <h2>Take-Home Points</h2>
+  <ul>
+    <li>Methadone and buprenorphine both save lives. The biggest danger is often leaving treatment without ongoing medication support.</li>
+    <li>The best medication is the one that is effective, safe, tolerable, and realistic to continue after discharge.</li>
+    <li>Being out of treatment carries substantially higher overdose death risk — 4.8× higher for methadone, 3.3× higher for buprenorphine.</li>
+    <li>The first four weeks after stopping medication are especially dangerous.</li>
+    <li>Detox alone is not enough for most people with opioid use disorder. Recovery treatment continues through medication, rehab or outpatient care, support, routines, and time.</li>
+    <li>Have naloxone. Make sure the people around you know where it is and how to use it.</li>
+  </ul>
+</div>
+
+<!-- Bottom print button -->
+<div style="text-align:center;margin:2rem 0 0;">
+  <button onclick="window.print()" type="button" style="background:var(--blue-dark);color:white;border:none;padding:.75rem 2rem;border-radius:6px;font-size:1rem;font-weight:700;cursor:pointer;font-family:var(--font);">&#128424; Print / Save as PDF</button>
+</div>
+
+</main>
+
+<footer role="contentinfo" style="background:var(--blue-dark);color:#cbd5e1;text-align:center;padding:1.25rem 1rem;font-size:.82rem;margin-top:2rem">
+  <p style="margin-bottom:.4rem">&#9432; This page is for educational purposes only and does not constitute medical advice.</p>
+  <p style="margin-bottom:.4rem">If you or someone you know is experiencing an overdose, call <strong>911</strong> immediately and administer naloxone if available.</p>
+  <p>Substance Abuse Helpline: <strong>1-800-662-4357 (SAMHSA)</strong> &nbsp;|&nbsp; Crisis Line: <strong>988</strong></p>
+</footer>
+
+</body>
+</html>
