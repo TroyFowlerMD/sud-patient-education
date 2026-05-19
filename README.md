@@ -69,3 +69,11 @@ Do not link individual topic pages directly from the dashboard.
 1. Create a new HTML file in `topics/` following the pattern of `benzodiazepines-anxiety-recovery.html`
 2. Add a new topic card in the appropriate category section of `index.html`
 3. No CSS or JS changes required for standard topic pages
+
+## Project Files
+
+- `CONTEXT.md` - Short Codex briefing for project purpose, stack, conventions, phase, and open questions.
+- `TASKS.md` - Live task seed from the current project state.
+- `WORKLOG.md` - Stub for future Codex session-end notes.
+- `DECISIONS.md` - Extracted project decisions about audience separation, routing, and privacy-preserving static hosting.
+- `docs/sud-patient-education.md` - Clean Markdown snapshot of the patient education hub setup and operating notes.

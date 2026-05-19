@@ -1,0 +1,23 @@
+﻿# Decisions
+
+This file records durable architectural, workflow, safety, and publishing decisions for SUD Patient Education. Each entry should include Context, Decision, Rationale, and Consequences.
+
+---
+
+### 2026-05-19 - Keep Patient Education Separate From Clinician Education
+Context: The portfolio contains both clinician-facing SUD education and patient-facing handout material.
+Decision: Keep patient-facing education in `sud-patient-education` and clinician-facing material in `sud-education-hub`.
+Rationale: Separate repos reduce accidental audience mixing and keep patient handouts plain-language and safety-focused.
+Consequences: Cross-links should be deliberate, and dashboard routing should make the patient/clinician distinction clear.
+
+### 2026-05-19 - Link The Dashboard To The Hub Only
+Context: Individual patient topic pages may expand over time.
+Decision: The main dashboard should link to the patient education hub page rather than deep-linking individual topics.
+Rationale: The hub provides controlled navigation, categories, and current safety framing.
+Consequences: New topics can be added without changing the main dashboard every time.
+
+### 2026-05-19 - Keep The Site Static And Privacy-Preserving
+Context: Patient education pages may be opened in clinical settings and shared outside the primary workspace.
+Decision: Use static HTML/CSS/vanilla JavaScript only, with no backend, forms, PHI collection, authentication, analytics, or remote embeds.
+Rationale: Static pages are easier to host, audit, print, and share without creating privacy risk.
+Consequences: Interactive behavior should stay local to the browser and avoid collecting or transmitting patient information.
