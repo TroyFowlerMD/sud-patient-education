@@ -24,3 +24,8 @@ This file records completed Codex work sessions for SUD Patient Education. Appen
 - In progress: Existing patient-education content tasks remain unchanged.
 - Blockers/notes: Instruction-only change; no app runtime code changed.
 
+### 2026-05-22 - Codex desktop - Workflow streamlining preference
+- Completed: Updated repo instructions so future Codex sessions proactively surface opportunities to streamline Dr. Fowler's workflow, including expected benefit, risk/cost, and smallest safe next step.
+- In progress: Existing patient-education content tasks remain unchanged.
+- Blockers/notes: Instruction-only change; no app runtime code changed.
+
