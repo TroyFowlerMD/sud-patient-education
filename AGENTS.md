@@ -93,3 +93,44 @@ Append entries to WORKLOG.md using this shape:
 - For new topics, review plain-language tone, safety guidance, and print behavior.
 - For routing changes, verify the main dashboard links to the hub page only unless explicitly changed.
 - If tests cannot run, record the reason in WORKLOG.md.
+
+## Standing Agent Policy Bootstrap (Deduplicated)
+
+> Single source of truth for standing AI-agent behavior in this repo. For project overview and safety framing, see README.md.
+
+### Hard rules
+- Never merge to the default branch without a green CI run on the working branch.
+- Keep diffs minimal. No version bumps, no dependency upgrades, and no refactors outside the task scope unless explicitly requested.
+- Use Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`, `ci:`).
+- Match existing code style in touched files.
+- If introducing Kotlin to a Java module, ensure `kotlinOptions { jvmTarget }` matches the existing Java `compileOptions` target.
+- If a task requires touching a file listed under "Protected files," stop and ask for explicit confirmation before editing it.
+
+### Protected files (do not modify unless explicitly requested)
+- `index.html`
+- `topics/*.html`
+- `assets/css/print.css`
+- `assets/js/print.js`
+- `content/*.md`
+
+### CI workflows
+No CI workflows configured yet.
+
+### Branch and PR conventions
+- Base branch: `main`.
+- Branch name: `codex/<short-slug>`.
+- Open as DRAFT PR if CI is not yet green on the branch.
+- PR description must link to the relevant CI run when CI exists.
+- One logical change per PR.
+- PR structure: see `.github/PULL_REQUEST_TEMPLATE.md`.
+
+### Toolchain
+- Static HTML/CSS/JS site; no build/dependency toolchain pins are currently defined in repo config files.
+
+### Definition of done
+A task is done only when all apply:
+- [ ] CI workflow(s) pass green on the working branch (or CI is not configured)
+- [ ] Diff touches only files required by the task
+- [ ] No changes to protected files (or explicit confirmation was given)
+- [ ] Commits follow Conventional Commits
+- [ ] PR description summarizes what changed and links the CI run when applicable
